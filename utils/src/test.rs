@@ -6,6 +6,6 @@ pub struct Point {
     pub y: i32,
 }
 
-pub fn get_point() -> Point {
+pub fn _get_point() -> Point {
     Point { x: 1, y: 1 }
 }

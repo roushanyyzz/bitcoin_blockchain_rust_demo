@@ -14,7 +14,7 @@ mod hash_test {
 
     #[test]
     fn hash_work() {
-        let point = get_point();
+        let point = _get_point();
         let v = my_serialize(&point);
         let result = get_hash(&v);
         println!("{}", result);

@@ -1,16 +1,16 @@
 use chrono::Utc;
 // use serde::Serialize;
-use utils::coder::{my_serialize, Serialize};
+use utils::coder::{my_serialize, Deserialize, Serialize};
 use utils::hash::get_hash;
 
-#[derive(Serialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
 pub struct BlockHeader {
     pub time: i64,
     pub tx_hash: String,
     pub pre_hash: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct Block {
     pub header: BlockHeader,
     pub hash: String,
